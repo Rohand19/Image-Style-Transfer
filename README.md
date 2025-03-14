@@ -1,44 +1,90 @@
+# 🎨 Image Style Transfer  
+**Transform ordinary images into stunning artwork using deep learning!**  
 
-# Image Style Transfer
+---
 
-# Table of Contents
+## 📚 Table of Contents  
+- [Introduction](#introduction)  
+- [Libraries](#libraries)  
+- [Functions](#functions)  
+  - [Load Image](#load-image)  
+  - [Visualize Image](#visualize-image)  
+- [Original and Style Images](#original-and-style-images)  
+- [Stylize Image](#stylize-image)  
+- [Export the Stylized Image](#export-the-stylized-image)  
 
-Introduction
+---
 
-Step 1 — Libraries
+## 🌟 Introduction  
+This project leverages **Intel's OneAPI DevCloud** platform for optimized execution and faster results. We utilize **OneAPI’s OneDNN toolkit** for deep neural network computations, enabling efficient and high-performance image transformation.  
 
-Step 2 — Functions
+**Goal:** Apply the artistic style of one image onto another using deep learning! 🎭✨  
 
-Step 3 — Original and Style Images
+---
 
-Step 4 — Arbitrary Image Stylization
+## 🛆 Libraries  
+Before diving into the code, ensure you have the following libraries installed:  
+```bash
+pip install matplotlib numpy tensorflow tensorflow-hub pillow
+```
+**Required Libraries:**  
+🔹 **Matplotlib** – Visualizing the results  
+🔹 **NumPy** – Handling numerical operations  
+🔹 **TensorFlow** – Deep learning framework  
+🔹 **TensorFlow Hub** – Pre-trained models  
+🔹 **PIL (Pillow)** – Image processing  
 
-Final Step — Exporting the Result
+---
 
+## 🔧 Functions  
 
-# Introduction
-We were able to achieve quicker execution times by leveraging Intel's Oneapi devcloud platform to construct this project. Oneapi's OneDNN toolkit was utilised in the creation of this project (Deep Neural Network)
+### 📥 Load Image  
+This function decodes images into three separate channels and processes them for optimal performance:  
+✅ **Decodes image pixels**  
+✅ **Crops the center of the image**  
+✅ **Resizes the image to match content & style images**  
 
-# Libraries
-We need to install a few libraries before anything else for this project. These libraries include Matplotlib, Numpy, TensorFlow, TensorFlow Hub, and PIL.
+---
 
-# Functions
-### Load Image
-We are decoding the image into three separate channels in this function. This is like delving into the pixel level of things. The centre of the photos are then cropped. Finally, we are resizing the image to make it the same size as our content and style photos.
+### 🎨 Visualize Image  
+This function helps in **displaying images in a grid format**, making it easy to compare before & after results.  
 
-### Visualize Image
-As implied by the function's name, we display the plots in grid order in this function.
+---
 
-# Original and Style Images
-This action will be simple. Selecting two pictures, we'll import them into our code. To import the photos, we'll utilise the load image function that we created earlier.
+## 🖌️ Original and Style Images  
+This step is simple! Select two images—**one for content** and **one for style**—and import them into your code.  
 
-# Stylize Image
-In this phase, we will define and load the TensorFlow hub model that we intend to employ. The model we'll employ is known as Arbitrary Image Styling. A model can be loaded in a variety of methods, including by downloading the model folder or by using the url.
+We’ll use our **load_image()** function from earlier to process these images before applying the style transfer.  
 
-I preferred downloading the model and importing it from my local drive for this project. The program won't need to download the model each time I run the code because of this.
+---
 
-[Here](https://tfhub.dev/google/magenta/arbitrary-image-stylization-v1-256/2) is the download link to arbitrary image stylization model.
-(The folder was renamed to tf_model for better understanding)
+## 🎨 Stylize Image  
+The core of this project! We utilize **TensorFlow Hub’s Arbitrary Image Stylization model** to transfer styles between images.  
 
-# Export the stylized Image
-Almost there! In this final step, we are going to visualize the final result to see the before and after of our snapshot. We will call the visualize function that we defined in the functions step.
+🛠 **Loading the Model:**  
+You can load the model in two ways:  
+1️⃣ **Directly from TensorFlow Hub**  
+2️⃣ **Download & use it locally** (Recommended for faster execution)  
+
+🔗 **[Download the model here](https://tfhub.dev/google/magenta/arbitrary-image-stylization-v1-256/2)**  
+_(The folder has been renamed to `tf_model` for clarity.)_  
+
+---
+
+## 🎨 Export the Stylized Image  
+We’re almost done! Now, we visualize the final result:  
+
+✅ **Show before & after comparisons**  
+✅ **Save the stylized output**  
+✅ **Admire your AI-powered artwork!** 🎨  
+
+---
+
+## 🚀 Final Thoughts  
+This project showcases the power of **Deep Learning & Computer Vision** in generating AI-powered art. 🖌️✨  
+
+🔗 **Check out more projects:** [GitHub](https://github.com/Rohand19)  
+
+📩 **Questions? Feel free to connect!** 🚀  
+
+---
